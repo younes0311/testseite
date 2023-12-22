@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function kosVerschieben(){
     window.scrollTo({
-        top:700,
+        top:1000,
         behavior:'smooth'
     })
   }
@@ -69,3 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: 'smooth'
     });
   }
+
+  setTimeout(function () {
+    var productsMain = document.getElementById("products-main");
+    productsMain.style.display = "flex";
+  }, 4500);

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    height: 1700px;
+    height: 2700px;
   }
   
   .background {
@@ -15,6 +15,7 @@ body {
     transition: 5s;
   }
   
+  
   @keyframes backgroundAnimation {
     0% {
       background-position: 0% 50%;
@@ -26,6 +27,7 @@ body {
       background-position: 0% 50%;
     }
   }
+
 
 
   .welcome-message {
@@ -119,12 +121,15 @@ animation: opicity 1s ease;
 animation: MainCata 1.5s ease-in-out;
   }
 
+
   
   @keyframes MainCata{
     0%{transform: translateY(200px);opacity: 0%;}
     100%{transform: translateY(0);opacity: 100%;}
   }
 
+
+  
   #cat-box-main img:hover{
     transform: scale(1.1);
   }
@@ -150,12 +155,13 @@ animation: MainCata 1.5s ease-in-out;
   #slider img{
     height: 250px;
     width: 250px;
-    animation: Slider 40s  infinite;
+    animation: SliderPc 40s  infinite;
     transition: 0.5s;
   }
 
+  
 
-  @keyframes Slider{
+  @keyframes SliderPc{
     0%{transform: translateX(0px);}
     10%{transform: translateX(-250px);}
     20%{transform: translateX(-500px);}
@@ -169,6 +175,18 @@ animation: MainCata 1.5s ease-in-out;
   }
 
 
+@keyframes Slider430{
+    0%{transform: translateX(0px);}
+    10%{transform: translateX(-120px);}
+    20%{transform: translateX(-240px);}
+    30%{transform: translateX(-360px);}
+    40%{transform: translateX(-480px);}
+    50%{transform: translateX(-600px);}
+    60%{transform: translateX(-720px);}
+    70%{transform: translateX(-840px);}
+    80%{transform: translateX(-960px);}
+    90%{transform: translateX(-1080px);}
+  }
 
   #scrollButton {
     display: none;
@@ -181,6 +199,7 @@ animation: MainCata 1.5s ease-in-out;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    z-index: 999;
   }
   
   /* Button-Styling beim Hover */
@@ -189,6 +208,137 @@ animation: MainCata 1.5s ease-in-out;
   }
 
 
-  @media (max-width:430px){
-    
+ 
+
+  #products-main{
+    height: 200px;
+    position: relative;
+    top: 200px;
+    display: none;
+    justify-content: space-evenly;
+    animation: ProductsMain 1s ease;
   }
+
+
+
+  @keyframes ProductsMain{
+    0%{opacity: 0;transform: translateY(100px);}
+    100%{opacity: 100;transform: translateY(0px);}
+  }
+
+
+  
+
+  #products-main #products-box{
+height: 200px;
+width: 200px;
+text-align: center;
+  }
+
+  #products-main #products-box img{
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px wheat;
+    transition: 0.3s;
+  }
+
+  #products-main #products-box img:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 40px white;
+  }
+
+  #products-main #products-box #clicks{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 40px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 10px;
+    cursor: pointer;
+   transition: 0.5s;
+   text-decoration: none;
+    box-shadow: 1px 1px 10px rgb(156, 156, 156);
+  }
+  
+  #products-main #products-box #clicks:hover {
+    background-color: #2f6b93;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 20px white;
+  }
+
+
+  #kos-box{
+    height: 900px;
+    background-color: rgb(165, 125, 79);
+    position: relative;
+    top: 350px;
+  }
+
+#kos-box #kos-pic img{
+    height: 500px;
+}
+
+
+
+
+@media (max-width:430px){
+    #navi h1 {
+        display: inline-block;
+        padding: 5px 20px;
+        font-size: 15px;
+        color: #fff;
+        background-color: #3498db;
+        border-radius: 10px;
+        cursor: pointer;
+       transition: 0.5s;
+        box-shadow: 3px 3px 30px rgb(156, 156, 156);
+      } #cat-box-main{
+        position: relative;
+        flex-direction: column;
+        justify-content: space-evenly;
+        top: 90px;
+        align-items: center;
+        animation: opicity 1s ease;
+      }#cat-box-main img{
+        height: 120px;
+      }
+      #slider img{
+        height: 120px;
+        width: 120px;
+        animation: Slider430 40s  infinite;
+        transition: 0.5s;
+      }#slider{
+        height:120px;
+        width: 120px;
+        background-color: blue;
+        display: flex;
+        overflow: hidden;
+      }#kos-box{
+        display: none;
+      }#products-main #products-box a img{
+        height: 140px;
+      }
+      #products-main #products-box #clicks{
+        display: flex;
+        margin: 10px;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 15px;
+        color: #fff;
+        background-color: #3498db;
+        border-radius: 10px;
+        cursor: pointer;
+       transition: 0.5s;
+       text-decoration: none;
+        box-shadow: 1px 1px 10px rgb(156, 156, 156);
+      }#products-main{text-align: center;
+    flex-wrap: wrap;position: relative;}
+    #products-main #products-box{
+      flex: 1 0 calc(33.33% - 20px);
+       box-sizing: border-box;flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        justify-content: center;
+    }
+}
