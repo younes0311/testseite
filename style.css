@@ -15,7 +15,7 @@ body {
     transition: 5s;
   }
   
-  /*
+
   @keyframes backgroundAnimation {
     0% {
       background-position: 0% 50%;
@@ -27,7 +27,7 @@ body {
       background-position: 0% 50%;
     }
   }
-*/
+
 
 
   .welcome-message {
@@ -40,7 +40,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -61,7 +61,7 @@ body {
 
  #navi{
     font-family: 'Arial', sans-serif;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: space-evenly;
   position: fixed;
@@ -70,16 +70,17 @@ body {
   z-index: 99;
 height: 50px;
 animation: opicity 1s ease;
+
 }
 
-/*
+
 
 @keyframes opicity{
     0%{opacity: 0%;}
     100%{opacity: 100%;}
 }
 
-*/
+
 
 
   #navi h1 {
@@ -108,7 +109,7 @@ animation: opicity 1s ease;
     justify-content: space-evenly;
     top: 130px;
     animation: opicity 1s ease;
-  
+ 
   }
 
   #cat-box-main img{
@@ -121,14 +122,14 @@ animation: opicity 1s ease;
 animation: MainCata 1.5s ease-in-out;
   }
 
-/*
+
   
   @keyframes MainCata{
     0%{transform: translateY(200px);opacity: 0%;}
     100%{transform: translateY(0);opacity: 100%;}
   }
 
-*/
+
   
   #cat-box-main img:hover{
     transform: scale(1.1);
@@ -136,12 +137,12 @@ animation: MainCata 1.5s ease-in-out;
  
 
   #slider-box{
-    height: 250px;
     position: relative;
     top: 150px;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     animation: opicity 2s;
+
   }
 
   #slider{
@@ -159,7 +160,7 @@ animation: MainCata 1.5s ease-in-out;
     transition: 0.5s;
   }
 
-  /*
+
 
   @keyframes SliderPc{
     0%{transform: translateX(0px);}
@@ -173,8 +174,8 @@ animation: MainCata 1.5s ease-in-out;
     80%{transform: translateX(-2000px);}
     90%{transform: translateX(-2250px);}
   }
-*/
-/*
+
+
 @keyframes Slider430{
     0%{transform: translateX(0px);}
     10%{transform: translateX(-120px);}
@@ -186,8 +187,7 @@ animation: MainCata 1.5s ease-in-out;
     70%{transform: translateX(-840px);}
     80%{transform: translateX(-960px);}
     90%{transform: translateX(-1080px);}
-  }
-*/
+}
   #scrollButton {
     display: none;
     position: fixed;
@@ -214,20 +214,20 @@ animation: MainCata 1.5s ease-in-out;
     height: 200px;
     position: relative;
     top: 200px;
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     animation: ProductsMain 1s ease;
-    
+  
   }
 
 
-/*
+
   @keyframes ProductsMain{
     0%{opacity: 0;transform: translateY(100px);}
     100%{opacity: 100;transform: translateY(0px);}
   }
 
-*/
+
   
 
   #products-main #products-box{
@@ -275,9 +275,10 @@ text-align: center;
 
   #kos-box{
     height: 900px;
-    background-color: rgb(62, 185, 212);
+display: flex;
     position: relative;
     top: 350px;
+    background-color: red;
   }
 
 #kos-box #kos-pic img{
@@ -285,12 +286,9 @@ text-align: center;
 }
 
 #kos-pic{
-    display: flex;
-    justify-content: end;
-    background-color: #2980b9;
-    position: relative;
-    top: 220px;
-    height: 700px;
+   background-color: #394e4e;
+   position: relative;
+   
 }
 #kos-pic img{
 animation: KosAnimationPic 5s ease-in-out infinite;
@@ -411,7 +409,7 @@ align-items: center;
         display: flex;
         overflow: hidden;
       }#kos-box{
-        display: none;
+        display: flex;
       }#products-main #products-box a img{
         height: 140px;
       }
@@ -437,4 +435,5 @@ align-items: center;
        align-items: center;
         justify-content: center;
     }
+
 }

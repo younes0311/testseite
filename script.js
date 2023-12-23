@@ -74,3 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
     var productsMain = document.getElementById("products-main");
     productsMain.style.display = "flex";
   }, 4500);
+
+  setTimeout(function () {
+  var KosBox = document.getElementById('kos-box');
+  KosBox.style.display='flex';
+    
+}, 5000); // 5000 milliseconds = 5 seconds
+  
